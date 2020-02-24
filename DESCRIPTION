@@ -1,0 +1,18 @@
+Package: sassyR
+Title: A sassy way to use R
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Collin",
+           family = "Nolte",
+           role = c("aut", "cre"),
+           email = "collin@uiowa.edu")
+Description: Working progress package to provide parallel R code for use in BIOS 7410/STAT 7510
+License: Mozilla Public License 2.0
+Encoding: UTF-8
+LazyData: true
+Imports:
+	data.table,
+	DescTools,
+	magrittr,
+	stringr
+RoxygenNote: 7.0.2
