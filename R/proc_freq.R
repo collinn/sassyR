@@ -17,6 +17,7 @@
 #' tab1 <-  proc_freq(Rhabdo1, "Freq", "Shakes*Rhabdo / ChiSq CellChi2")
 #' tab2 <- proc_freq(Hawkeye, "Freq", "Year*Win_Loss / Measures")
 #' tab3 <- proc_freq(HA, "Freq", "Trt_Grp*MI / RelRisk")
+#' @export
 
 proc_freq <- function(x, weight, tables) {
   

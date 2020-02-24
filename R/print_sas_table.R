@@ -8,6 +8,7 @@
 #' @param digits This is set to 4 because default print is a bit much
 #' @param ... these are your standard print options, based on the default class
 #' of the object
+#' @export
 print.sas_table <- function(x, na.print = "-", digits = 4, ...) {
   y <- x
   class(y) <- class(x)[2]

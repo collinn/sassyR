@@ -6,6 +6,7 @@
 #' A <- structure(1:4, dim = c(2L, 2L), 
 #'                dimnames = list(c("A", "B"), c("X", "Y")))
 #' make_measures_table(A)
+#' @export
 make_measures_table <- function(x) {
   fxns <- list(GoodmanKruskalGamma = function(...) GoodmanKruskalGamma(...),
                KendallTauB = function(...) KendallTauB(...),

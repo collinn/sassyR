@@ -4,6 +4,7 @@
 #' 
 #'  @param x A contingency table
 #'  @param col Column number in which to compute relative risk
+#' @export
 relrisk <- function(x, col) {
   ## May need to be updated to allow for more than 2x2
   n <- rowSums(x)

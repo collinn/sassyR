@@ -15,6 +15,7 @@
 #' ctab <- dcast(Hawkeye, Year ~ Win_Loss, value.var = "Freq")
 #' ctab <- as.matrix(ctab[, 2:3], rownames = ctab[[1]])
 #' make_sas_freq_table(ctab)
+#' @export
 
 make_sas_freq_table <- function(x, cellchi2 = FALSE) {
 

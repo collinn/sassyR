@@ -8,6 +8,7 @@
 #' A <- structure(1:4, dim = c(2L, 2L), 
 #'                dimnames = list(c("A", "B"), c("X", "Y")))
 #' make_relrisk_table(A)
+#' @export
 make_relrisk_table <- function(x) {
   if((nrow(x) != 2) | (ncol(x) != 2)) {
     stop("RelRisk table requires 2x2 input vars")

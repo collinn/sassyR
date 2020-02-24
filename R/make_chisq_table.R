@@ -10,6 +10,7 @@
 #' A <- structure(1:4, dim = c(2L, 2L), 
 #'                dimnames = list(c("A", "B"), c("X", "Y")))
 #' make_chisq_table(A)
+#' @export
 make_chisq_table <- function(x, exact = FALSE) {
   chi_sq_pearson <- get_cell_chisq(x, "Pearson") %>% sum
   chi_sq_lr <- get_cell_chisq(x, "LR") %>% sum

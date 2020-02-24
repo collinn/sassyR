@@ -5,6 +5,7 @@
 #' @param x A contingency table
 #' @param type character vector indicating chi-square statistic to use. Default
 #' is "Pearson", though "LR" and "adjusted" are also available
+#' @export
 get_cell_chisq <- function(x, type = "Pearson") {
   row_sums <- rowSums(x)
   col_sums <- colSums(x)
