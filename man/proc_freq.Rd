@@ -25,7 +25,6 @@ tables = "var1*var2 / table1 option1 table2 table3"}
 (limited) Emulation of SAS proc_freq
 }
 \examples{
-## Not run
 tab1 <-  proc_freq(Rhabdo1, "Freq", "Shakes*Rhabdo / ChiSq CellChi2")
 tab2 <- proc_freq(Hawkeye, "Freq", "Year*Win_Loss / Measures")
 tab3 <- proc_freq(HA, "Freq", "Trt_Grp*MI / RelRisk")
