@@ -11,13 +11,13 @@ proc_freq(x, weight, tables)
 be generated with variables in the order that the data is coded. Data should
 be in long format (see Hawkeye data)}
 
-\item{weight}{The variable/column name in x the represents the frequency or 
+\item{weight}{The variable/column name in x the represents the frequency or
 count, as a length one character vector, i.e., "Freq"}
 
 \item{tables}{This is similar to the 'TABLES' argument in SAS. This should
 also be a length one character vector. At a minimum, this should contain
 two variables from x that we are interested in tabulating, joined with an '*'.
-Similar to SAS code, we can request a number of tables and options, including Measures, 
+Similar to SAS code, we can request a number of tables and options, including Measures,
 RelRisk, ChiSq, CellChi2, Exact, and CMH1. This argument should be of this form:
 tables = "var1*var2 / table1 option1 table2 table3"}
 }
