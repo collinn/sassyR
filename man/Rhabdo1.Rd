@@ -4,7 +4,9 @@
 \name{Rhabdo1}
 \alias{Rhabdo1}
 \title{Hawkeye Rhabdo Football Study}
-\format{An object of class \code{"data.table"}}
+\format{
+An object of class \code{"data.table"}
+}
 \usage{
 data(Rhabdo1)
 }

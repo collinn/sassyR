@@ -5,4 +5,5 @@
 #' @import DescTools
 #' @import magrittr
 #' @import stringr
+#' @import MASS
 NULL

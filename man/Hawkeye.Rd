@@ -4,7 +4,9 @@
 \name{Hawkeye}
 \alias{Hawkeye}
 \title{Hawkeye Football Annual Win/Loss Record}
-\format{An object of class \code{"data.table"}}
+\format{
+An object of class \code{"data.table"}
+}
 \usage{
 data(Hawkeye)
 }

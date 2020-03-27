@@ -4,7 +4,9 @@
 \name{HA}
 \alias{HA}
 \title{Asprin and Heart Attack Study}
-\format{An object of class \code{"data.table"}}
+\format{
+An object of class \code{"data.table"}
+}
 \usage{
 data(HA)
 }
