@@ -92,7 +92,8 @@ proc_genmod <- function(fit, scale = "pearson") {
     scl <- sqrt(dispersion)
     scl.se <- 0
   }
-  mle_mat <- rbind(mle_mat, c(scl, scl.se, scl - scl.se, scl + scl.se,
+  z <- qnorm(0.975)
+  mle_mat <- rbind(mle_mat, c(scl, scl.se, scl - z*scl.se, scl + z*scl.se,
                               NA, NA, NA))
   rownames(mle_mat)[3] <- ifelse(fam[[1]] == "negbinom", 
                                  "Dispersion", "Scale")
