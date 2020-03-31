@@ -10,6 +10,8 @@ Description: Working progress package to provide parallel R code for use in BIOS
 License: Mozilla Public License 2.0
 Encoding: UTF-8
 LazyData: true
+Depends:
+	R (>= 3.5.0)
 Imports:
 	data.table,
 	DescTools,
