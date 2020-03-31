@@ -17,9 +17,9 @@
 #' 
 #' fit1 <- glm(Mort ~ Age_Gp, family = poisson, offset = Log_Pop, data = ACHD)
 #' fit2 <- glm.nb(Mort ~ Age_Gp + offset(Log_Pop), data = ACHD)
-#' fit3 <- glm(cbind(Mort, Pop) ~ Age_Gp, 
+#' fit3 <- glm(cbind(Mort, Pop-Mort) ~ Age_Gp, 
 #'             family = binomial(link = "log"), data = ACHD)
-#' fit4 <- glm(cbind(Mort, Pop) ~ Age_Gp, 
+#' fit4 <- glm(cbind(Mort, Pop-Mort) ~ Age_Gp, 
 #'             family = binomial(link = "logit"), data = ACHD)             
 #' fit5 <- glm(Log_Mort ~ Age_Gp, family = gaussian, 
 #'             offset = Log_Pop, data = ACHD)
