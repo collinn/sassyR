@@ -9,12 +9,12 @@ proc_genmod(fit, scale = "pearson")
 \arguments{
 \item{fit}{A fitting 'glm' or 'glm.nb' object}
 
-\item{scale}{Matching SAS argument, uses either pearson or deviance for 
+\item{scale}{Matching SAS argument, uses either pearson or deviance for
 estimation of dispersion parameter, takes either "pearson" or "deviance"}
 }
 \description{
 This function emulates some of the output returned by proc_genmod
-in SAS. It is simply a wrapper for a handful of diagnostics, organized in 
+in SAS. It is simply a wrapper for a handful of diagnostics, organized in
 a slightly convenient way. This function does not fit any actual models,
 and thus must be passed a fitted object of class 'glm'
 }
@@ -26,11 +26,11 @@ data(ACHD)
 
 fit1 <- glm(Mort ~ Age_Gp, family = poisson, offset = Log_Pop, data = ACHD)
 fit2 <- glm.nb(Mort ~ Age_Gp + offset(Log_Pop), data = ACHD)
-fit3 <- glm(cbind(Mort, Pop-Mort) ~ Age_Gp, 
+fit3 <- glm(cbind(Mort, Pop-Mort) ~ Age_Gp,
             family = binomial(link = "log"), data = ACHD)
-fit4 <- glm(cbind(Mort, Pop-Mort) ~ Age_Gp, 
-            family = binomial(link = "logit"), data = ACHD)             
-fit5 <- glm(Log_Mort ~ Age_Gp, family = gaussian, 
+fit4 <- glm(cbind(Mort, Pop-Mort) ~ Age_Gp,
+            family = binomial(link = "logit"), data = ACHD)
+fit5 <- glm(Log_Mort ~ Age_Gp, family = gaussian,
             offset = Log_Pop, data = ACHD)
 
 proc_genmod(fit1)
