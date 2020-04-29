@@ -23,6 +23,10 @@ opt = "waldci covb lackfit", in any order}
 fit <- glm(cbind(Mort, Pop-Mort) ~ Age_Gp,
            family = binomial(link = "logit"), data = ACHD)
 
-fit <- glm(cbind(MJ, Total-MJ) ~ AL + CG, data = maryjane,
+proc_logistic(fit, tables = "waldci covb lackfit")
+
+fit2 <- glm(cbind(MJ, Total-MJ) ~ AL + CG, data = maryjane,
            family = binomial)
+
+proc_logistic(fit2, tables = "waldci")
 }
