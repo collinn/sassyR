@@ -13,8 +13,12 @@
 #' fit <- glm(cbind(Mort, Pop-Mort) ~ Age_Gp,
 #'            family = binomial(link = "logit"), data = ACHD)
 #'
-#' fit <- glm(cbind(MJ, Total-MJ) ~ AL + CG, data = maryjane,
+#' proc_logistic(fit, tables = "waldci covb lackfit")
+#'
+#' fit2 <- glm(cbind(MJ, Total-MJ) ~ AL + CG, data = maryjane,
 #'            family = binomial)
+#'
+#' proc_logistic(fit2, tables = "waldci")
 #' @export
 
 proc_logistic <- function(fit, scale = "pearson", tables = "waldci") {
@@ -41,7 +45,7 @@ proc_logistic <- function(fit, scale = "pearson", tables = "waldci") {
   tabs <- tabs[tabs %in% avail_tabs]
 
   ## Assumes 11 components of what was used in class
-  output <- vector("list", 7 + tab_to_add)
+  output <- vector("list", 6 + tab_to_add)
 
   ## Response profile
   total_obs <- fit$prior.weights
